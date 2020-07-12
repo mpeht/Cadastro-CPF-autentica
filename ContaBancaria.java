@@ -42,11 +42,13 @@ public class ContaBancaria {
         int i;
         int num01 = 0, num02 = 0;
         int[] cpfNum = new int[11];
+        char [] vetor = new char[11];
+       //Separa a String em um vetor de char
+        entrada.getChars(0, 11, vetor, 0);
         if (cpfNum.length == cpfNum.length) {
             for (i = 0; i < cpfNum.length; i++) {
-                //Separa cada número na String atribui a variável char e insere cada número da variavel no vetor int
-                char a = entrada.charAt(i);
-                cpfNum[i] = Character.getNumericValue(a);
+                            
+                cpfNum[i] = Character.getNumericValue(vetor[i]);
 
             }
             //Pega os dois últimos números do vetor para autenticar o documento
